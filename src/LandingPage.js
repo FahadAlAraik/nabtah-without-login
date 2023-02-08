@@ -12,32 +12,30 @@ import axios from 'axios';
 function LandingPage() {
 
     function handleUpload() {
-        if(sessionStorage.getItem('logged')) {
-            window.location.href = '/image'
-        }
-        else {
-            window.location.href = '/login'
-        }
+        
+        window.location.href = '/image'
+       
+
     }
 
 
     return (
-        <Container style={{marginTop:'125px'}}>
+        <Container style={{marginTop:'125px'}} data-aos="fade-right"  data-aos-duration='1500'>
 
             <Row>
 
-                <Col className='align-self-center align-items-center justify-content-end ' >
-                    <p className='landing-page-content'>Detecting Plant<br /> diseases have <br /> never been  <br /> <span style={{color:'#FF8888'}}>easier</span>
+                <Col className='align-self-center align-items-center justify-content-end m-4' >
+                    <p className='landing-page-content' >Detecting Plant<br /> diseases have <br /> never been  <br /> <span style={{color:'#FF8888'}}>easier</span>
                     <br />
-                    <span onClick={handleUpload} className='mt-3 p-3 span-hover' style={{fontSize:'1.75rem',textAlign:'center',display:'block',background:'black',borderRadius:'15px'}}>
+                    <span onClick={handleUpload} className='mt-3 p-3 span-hover'>
                         <BsUpload /> Upload Image
                     </span>
                     </p>
                 
                 </Col>
                 
-                <Col className='text-end'>
-                    <img src={happy_plant} />
+                <Col className='text-center'  >
+                    <img  src={happy_plant}  className='landing-page-image'  />
                 </Col>
 
             </Row>

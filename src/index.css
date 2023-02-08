@@ -30,5 +30,49 @@ code {
 
 .span-hover:hover {
   cursor: pointer;
+  
 }
 
+.span-hover {
+  font-size: 1.75rem;
+  text-align: center;
+  display: block;
+  background: black;
+  border-radius: 15px;
+}
+
+@media only screen and (max-width:1199px) {
+  .landing-page-image {
+    width: 460px;
+    height: 460px;
+  }
+}
+
+@media only screen and (max-width:552px) {
+
+  .landing-page-image {
+    width: 356px;
+    height: 356px;
+  }
+  
+}
+
+@media only screen and (max-width:486px) {
+  .landing-page-content {
+    
+    font-size: 1.9rem;
+  }
+  .span-hover {
+    font-size: 1.55rem;
+  }
+}
+
+@media only screen and (max-width:413px) {
+  .landing-page-content {
+    
+    font-size: 1.55rem;
+  }
+  .span-hover {
+    font-size: 1.15rem;
+  }
+}
