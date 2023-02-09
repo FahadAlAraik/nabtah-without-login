@@ -47,13 +47,14 @@ function UploadPage() {
         const fd = new FormData()
         fd.append('img',file,file.name)
         setWaitingResult(true)
-         await axios.post('https://52.208.80.193/image',fd,{withCredentials:true})
+         await axios.post('https://52.208.80.193/image',fd)
         .then(res => {
             
             updateResult(res.data)
             setWaitingResult(false)
 
         }).catch(err => {
+          console.log(err)
           if(err.message == "Network Error") {
             updateErrUpload("Sorry, the server is currently offline due to the team working on the model, please try again later !")
           }
