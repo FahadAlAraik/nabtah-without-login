@@ -47,7 +47,7 @@ function UploadPage() {
         const fd = new FormData()
         fd.append('img',file,file.name)
         setWaitingResult(true)
-         await axios.post('https://52.208.80.193/image',fd)
+         await axios.post('https://52.208.80.193/image',fd,{withCredentials:true})
         .then(res => {
             
             updateResult(res.data)
