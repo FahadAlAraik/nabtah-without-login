@@ -1,4 +1,4 @@
-.lkjDVC {
+.lkjDVC , .iNitOb {
     border-radius: 50px;
     border:2px dashed #555c79!important;
     background-color: #a399bb24;
@@ -10,14 +10,14 @@
 }
 
 /* label text */
-.bXgVCj {
+.bXgVCj, .EUdRU {
     color: #555c79!important;
     font-size:1.5rem !important;
     font-weight: lighter;
     font-family: 'Poppins';
 }
 
-.lkjDVC svg {
+.lkjDVC svg, .iNitOb svg {
     
     width: 96px;
     height: 96px;
@@ -34,7 +34,7 @@ label .sc-bcXHqe {
 }
 
 /*Span container for upload image here and types*/
-.dmajdp  {
+.dmajdp , .dWLNfR {
     
     color: #555c79!important;
     justify-content: center!important;

@@ -16,7 +16,7 @@ import b2 from './icons/exampleBad2.jpg';
 import b3 from './icons/exampleBad3.jpg';
 import {AiOutlineClose} from 'react-icons/ai'
 
-const fileTypes = ["JPEG", "PNG","JPG"];
+const fileTypes = ["JPEG", "PNG","JPG","SVG"];
 function UploadPage() {
 
     const [visible, setVisible] = useState(false)
@@ -47,7 +47,8 @@ function UploadPage() {
         const fd = new FormData()
         fd.append('img',file,file.name)
         setWaitingResult(true)
-         await axios.post('https://52.208.80.193/image',fd)
+         //await axios.post('https://52.208.80.193/image',fd)
+         await axios.post('http://localhost:5000/image',fd)
         .then(res => {
             
             updateResult(res.data)
@@ -145,11 +146,11 @@ function UploadPage() {
         id="test"
         handleChange={handleChange}
         name="img"
-        className='lkjDVC'
+        types={fileTypes}
       
       />
       <br />
-      {errUpload != null &&<Alert style={{width:'30%',margin:'auto'}} variant='warning'>{errUpload}</Alert> }
+      {errUpload != null &&<Alert style={{width:'40%',margin:'auto'}} variant='warning'>{errUpload}</Alert> }
       <br />
       {URLState && <img src={URLState} style={{width:'256px',height:'256px'}} />}
       <br />
