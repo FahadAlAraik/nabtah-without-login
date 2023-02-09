@@ -1,0 +1,51 @@
+
+
+.form-control:focus {
+    border-color:navy;
+    color:black;
+}
+
+.form-control {
+    border-color:#555c79;
+    border:2px soild  #555c79
+}
+
+.form-floating {
+    position: relative;
+}
+
+.hide-show-password {
+    position: absolute;
+    top:30%;
+    right: 3%;
+    width: 24px;
+    height: 24px;
+    
+}
+
+.login-page-image {
+    width: 400px;
+    height: 400px;
+}
+
+@media screen  and (max-width:576px) {
+
+    .login-page-image {
+        width: 296px;
+        height: 296px;
+    }
+
+}
+
+@media screen  and (max-width:991px) {
+
+    .login-page-image {
+        width: 316px;
+        height: 316px;
+    }
+
+   .login-reverse-row {
+    flex-direction: column-reverse;
+   }
+
+}
