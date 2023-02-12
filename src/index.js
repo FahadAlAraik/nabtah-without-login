@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import './NavigationBar.css';
 import './Plants.css';
+import './HowToUse.css';
 import './UploadImage.css';
 import './PredictionResult.css';
 import './About.css';

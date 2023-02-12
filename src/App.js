@@ -10,7 +10,7 @@ import About from './About';
 import Plants from './Plants';
 import NavigationBar from './NavigationBar';
 import Footer from './Footer';
-
+import HowToUse from './HowToUse';
 function App() {
 
   const [user,setUser] = useState('')
@@ -25,6 +25,7 @@ function App() {
       <Route path='/' element={<Home />}></Route>
       <Route path="/about" element={<About/>}></Route>
       <Route path ='/image' element={<UploadPage />}></Route> 
+      <Route path='/docs' element={<HowToUse />}></Route>
       <Route path ='*' element={<NotFound />}></Route>
     </Routes>
 

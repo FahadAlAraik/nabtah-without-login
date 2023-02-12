@@ -90,3 +90,7 @@
         max-width: 1550px;
     }
 }
+
+.back-icon:hover {
+    cursor:pointer;
+}

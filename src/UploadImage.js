@@ -21,7 +21,7 @@ function UploadPage() {
 
     const [visible, setVisible] = useState(false)
     const [fillColor,updateFillColor] = useState('gray')
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(sessionStorage.getItem('noPopUp'));
     const [file, setFile] = useState(null);
     const [URLState,setURL] = useState(null)
     const [apiResult, updateResult] = useState(null)
@@ -83,8 +83,8 @@ function UploadPage() {
         
         <>
         <NavigationBar />
-        {isOpen && (
-        <div onClick={() => setIsOpen(false)} style={{
+        {isOpen == null && (
+        <div onClick={() => {sessionStorage.setItem('noPopUp', true);setIsOpen(false);}} style={{
           position:'absolute',
           display:'flex',
           alignItems:'center',
@@ -98,7 +98,7 @@ function UploadPage() {
           background:'rgba(0, 0, 0, 0.5)',
           
         }}>
-         <Container style= {{
+         <Container onClick={() => sessionStorage.setItem('noPopUp', true)} style= {{
          
           
           background:'white',
@@ -164,8 +164,9 @@ function UploadPage() {
       </Col>
       </Row>
       {err &&<Alert style={{width:'30%',margin:'auto'}} variant='warning'>You haven't uploaded an image!</Alert> }
-      <Footer />
+    
         </Container>
+        <Footer />
 
    
         </>

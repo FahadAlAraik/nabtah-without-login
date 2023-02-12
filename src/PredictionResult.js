@@ -5,7 +5,8 @@ import plantName from './icons/terpene.png';
 import accuracy  from './icons/accuracy.png';
 import disease from './icons/disease.png';
 import { Form } from 'react-bootstrap';
-import cherryHealthy from './icons/cherry-healthy.JPG'
+import cherryHealthy from './icons/cherry-healthy.JPG';
+import {IoIosArrowBack} from 'react-icons/io'
 function PredictionResult(props) {
 
 
@@ -29,10 +30,13 @@ function PredictionResult(props) {
 
     return (
         <Container  className='container-result'>
+          
+          
                 <Row>
-                    
+               
                     <Col className=''>
-                        <h1 className='text-center Poppins p-5'>Result</h1>
+                   
+                        <h1 className='text-center Poppins p-3' style={{position:'relative'}}><IoIosArrowBack className='back-icon' onClick={() => window.location.href='/image'} style={{position:'absolute',left:'0%',width:'48px',height:'48px',float:'left'}} />Result</h1>
                             <Row className='justify-content-center' >
                                 <Col className='m-3'  >
                                     <Row className='justify-content-center result-card ' >
@@ -67,7 +71,7 @@ function PredictionResult(props) {
                     <Col className=' align-items-center align-self-center justify-content-center text-center'>
                         <img src={props.imgSRC} className='image-result m-3'  />
                     </Col>
-
+        
                     <Row className='Poppins suggested-treatment-card'>
                     <Col  className=''>
                             <h1 className='title-card'>Suggested Treatment:</h1>
