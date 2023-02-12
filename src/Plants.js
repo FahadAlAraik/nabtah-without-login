@@ -3,7 +3,7 @@ import {RiPlantFill} from 'react-icons/ri';
 import { Container } from 'react-bootstrap';
 import {Row} from 'react-bootstrap';
 import {Col} from 'react-bootstrap';
-import {GiCherry,GiCorn,GiGrapes,GiChiliPepper,GiPotato,GiTomato} from 'react-icons/gi'
+import {GiCherry,GiCorn,GiGrapes,GiBellPepper,GiPotato,GiTomato} from 'react-icons/gi'
 
 function Plants() {
     return (
@@ -36,7 +36,7 @@ function Plants() {
 
             <Row className='justify-content-center' style={{margin:'95px'}}>
                 <Col className='text-center m-2' md={3} data-aos="fade-in"  data-aos-duration='3000'>
-                    <GiChiliPepper className='plant-icon m-3' />
+                    <GiBellPepper className='plant-icon m-3' />
                     <h3 className='Poppins mt-2 plant-title'>Pepper</h3>
                     <small className='form-text diseases'>Healthy, Bacterial Spot</small>
                 </Col>
