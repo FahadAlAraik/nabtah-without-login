@@ -62,7 +62,7 @@ function PredictionResult(props) {
                             </Row>
                             <Row className='mt-5 Poppins disease-info-card'>
                                 <Col>
-                                <h1 className='title-card'>Disease Information:</h1>
+                                <h1 className='title-card'>{props.diseaseName == 'healthy' ? 'Plant Information': 'Disease Information:'}</h1>
                                 <p style={{textAlign:'justify'}}>{props.description}</p></Col>
                             </Row>
                     </Col>
